@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sito in aggiornamento - Nuovo volto, stesso cuore.</title>
+  
+  <!-- Google Font: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0a1e83;
+    }
+
+    .video-wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #0a1e83;
+	  font-size:18px;
+	  color:#fff;
+	  text-align:center;
+    }
+
+    .video-bg {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      background-color: #0a1e83;
+    }
+
+    #video-desktop {
+      display: block;
+	  aspect-ratio:16/9;
+	  object-fit:contain;
+    }
+
+    #video-mobile {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      #video-desktop {
+        display: none;
+      }
+
+      #video-mobile {
+		display:block;
+		max-height: 100%;
+		aspect-ratio: 9/16;
+		object-fit: contain;
+		background-color: #0a1e83;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="video-wrapper">
+    <!-- Desktop Video -->
+    <video autoplay muted loop playsinline id="video-desktop" class="video-bg">
+      <source src="video_desktop.mp4" type="video/mp4" />
+      Il tuo browser non supporta il video. SITO IN AGGIORNAMENTO - TORNIAMO PRESTO!
+    </video>
+
+    <!-- Mobile Video -->
+    <video autoplay muted loop playsinline id="video-mobile" class="video-bg">
+      <source src="video_mobile.mp4" type="video/mp4" />
+      Il tuo browser non supporta il video. SITO IN AGGIORNAMENTO - TORNIAMO PRESTO!
+    </video>
+  </div>
+
+</body>
+</html>
